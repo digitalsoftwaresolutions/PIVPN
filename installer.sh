@@ -11,4 +11,4 @@ cp firewall.sh /etc/openvpn/firewall.sh
 chmod +x /etc/openvpn/firewall.sh
 cp auth.txt /etc/openvpn/auth.txt
 cp profile.ovpn /etc/openvpn/profile.ovpn
-sed '$isudo openvpn --config /etc/openvpn/profile.ovpn --auth-user-pass /etc/openvpn/auth.txt --script-security 2 --up /etc/openvpn/firewall.sh' /etc/rc.local > /etc/rc.local
+echo "sudo openvpn --config /etc/openvpn/profile.ovpn --auth-user-pass /etc/openvpn/auth.txt --script-security 2 --up /etc/openvpn/firewall.sh" > /etc/rc.local
